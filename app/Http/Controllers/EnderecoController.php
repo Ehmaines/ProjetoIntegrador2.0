@@ -21,7 +21,7 @@ class EnderecoController extends Controller
     {
         $user = Auth::user();
         $enderecos = DB::select("select * from enderecos where Enderecos.Users_id = :id_user", ['id_user' => $user->id]);
-        return view('Endereco.endereco')->with('endereco', $enderecos);
+        return view('Endereco.endereco')->with('enderecos', $enderecos);
     }
 
     /**
