@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use App\Produto;
 use App\TipoProduto;
+use App\Endereco;
 use BD;
 
 class EnderecoController extends Controller
@@ -26,7 +29,7 @@ class EnderecoController extends Controller
      */
     public function create()
     {
-         
+       return view('Endereco.create');
     }
 
     /**
@@ -37,7 +40,18 @@ class EnderecoController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $user = Auth::user();
+        print_r($user->id);
+        $endereco = new Endereco();
+        $endereco->Users_id = $user->id;
+        $endereco->bairro = $request->bairro;
+        $endereco->logradouro = $request->logradouro;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->save();
+        $response['success'] = true;
+        $response['message'] = "Pedido criado com sucesso";
+        return redirect()->route('endereco');
     }
 
     /**

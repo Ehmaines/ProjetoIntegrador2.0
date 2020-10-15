@@ -8,27 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" action="{{route('produto.store')}}">
-            @csrf
-            <div class="form-group">
-                <label for="input-nome">Rua/nº da casa</label>
-                <input type="text" name="nome" class="form-control" id="input-nome" placeholder="Digite o endereço">
-            </div>
-            <div class="form-group">
-                <label for="input-preco">complemento</label>
-                <input type="text" name="preco" class="form-control" id="input-preco" placeholder="Digite o complemento">
-            </div>
-            <div class="form-group">
-                <label for="select-tipo">Tipo</label>
-                {{-- <select id="select-tipo" class="form-control" name="tipo">
-                    @foreach ($tipoProdutos as $tipo)
-                        <option value="{{$tipo->id}}">{{$tipo->descricao}}</option>
-                    @endforeach
-                </select> --}}
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <a class="btn btn-primary" href="{{route('home')}}">Voltar</a>
-        </form>
+        <a href="endereco/create">Criar Endereço</a>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

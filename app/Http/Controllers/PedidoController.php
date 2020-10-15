@@ -80,7 +80,7 @@ class PedidoController extends Controller
                 $response['message'] = "Pedido criado com sucesso";
                 $response['return'] = $pedidos;
                 //echo json_encode($response);
-                return response()->json( $response, 201 );
+                
             }
 
             $response['success'] = false;
