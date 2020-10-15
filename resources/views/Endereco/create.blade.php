@@ -30,7 +30,7 @@
                 <label for="select-tipo">Tipo</label>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
-            <a class="btn btn-primary" href="{{route('home')}}">Voltar</a>
+            <a class="btn btn-primary" href="{{route('endereco')}}">Voltar</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
