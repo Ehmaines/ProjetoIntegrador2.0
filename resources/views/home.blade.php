@@ -18,7 +18,7 @@
                         @endif
                         <a href="{{route('welcome')}}" class="btn btn-primary">{{__('home.voltar')}}</a>    
                         <a href="{{route('pedido.index')}}" class="btn btn-primary">{{__('home.manterPedidos')}}</a>
-                        <a href="{{route('endereco')}}" class="btn btn-primary">Manter Endereços</a>
+                        <a href="{{route('endereco')}}" class="btn btn-primary">{{__('home.manterEndereco')}}</a>
                         <a href="#" class="btn btn-primary">{{__('home.manterPerfil')}}</a>
                     </div>
                 </div>

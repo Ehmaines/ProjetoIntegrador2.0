@@ -5,4 +5,5 @@ return [
     'voltar' => 'Back',
     'manterPedidos' => 'Keep Order',
     'manterPerfil' => 'Keep Profile',
+    'manterEndereco' => 'Keep Adress',
 ];

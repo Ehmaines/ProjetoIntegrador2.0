@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Entrar como usuário</div>
+                    <div class="card-header">{{__('login.entrarcomousuario')}}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
@@ -13,7 +13,7 @@
 
                             <div class="form-group row">
                                 <label for="email"
-                                       class="col-md-4 col-form-label text-md-right">E-mail</label>
+                                       class="col-md-4 col-form-label text-md-right">{{__('login.email')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -30,7 +30,7 @@
 
                             <div class="form-group row">
                                 <label for="password"
-                                       class="col-md-4 col-form-label text-md-right">Senha</label>
+                                       class="col-md-4 col-form-label text-md-right">{{__('login.senha')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -52,7 +52,7 @@
                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
-                                            Lembrar-se de mim
+                                            {{__('login.lebrarSeDeMim')}}
                                         </label>
                                     </div>
                                 </div>
@@ -60,15 +60,15 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <a href="{{route('welcome')}}" class="btn btn-primary">Voltar</a>  
+                                    <a href="{{route('welcome')}}" class="btn btn-primary">{{__('login.voltar')}}</a>  
 
                                     <button type="submit" class="btn btn-primary">
-                                        Entrar
+                                        {{__('login.entrar')}}
                                     </button>
 
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            Esqueceu a senha?
+                                            {{__('login.esqueceuSenha')}}
                                         </a>
                                     @endif
                                 </div>
