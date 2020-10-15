@@ -34,7 +34,7 @@ Route::post('/pedidoproduto/{id_pedido}/{id_produto}/{id_endereco}/{quantidade}'
 Route::delete('/pedidoproduto/{id_pedido}/{id_produto}', "PedidoProdutoController@destroy")->name("pedidoproduto.destroy");
 
 //Rotas do CRUD de Endereços
-Route::get('/endereco', "EnderecoController@Index")->name('endereco.index');
+Route::get('/endereco', "EnderecoController@Index")->name('endereco');
 
 // Rotas de autenticação
 Route::get('idioma/{idioma}', "IdiomaController@trocaIdioma")->name("idioma.trocaIdioma");
