@@ -20,7 +20,7 @@ class EnderecoController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $enderecos = DB::select("select * from enderecos where Enderecos.Users_id = :id_user", ['id_user' => $user->id]);
+        $enderecos = json_decode(json_encode(DB::select("select * from enderecos where Enderecos.Users_id = :id_user", ['id_user' => $user->id])), true);
         return view('Endereco.endereco')->with('enderecos', $enderecos);
     }
 
