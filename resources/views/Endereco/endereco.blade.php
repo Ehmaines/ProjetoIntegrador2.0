@@ -30,8 +30,8 @@
                         <td>{{$endereco['numero']}}</td>
                         <td>{{$endereco['complemento']}}</td>
                         <td>
-                            <a class="btn btn-outline-secondary" href="#">Editar</a>
-                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="#">Remover</a>
+                            <a class="btn btn-outline-secondary" href="">Editar</a>
+                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="{{route('endereco.destroy', $endereco['id'])}}">Remover</a>
                         </td>
                     </tr>
                 @endforeach

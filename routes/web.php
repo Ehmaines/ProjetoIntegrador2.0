@@ -37,6 +37,7 @@ Route::delete('/pedidoproduto/{id_pedido}/{id_produto}', "PedidoProdutoControlle
 Route::get('/endereco', "EnderecoController@index")->name('endereco');
 Route::get('/endereco/create', "EnderecoController@create")->name('endereco.create');
 Route::post('/endereco/store', "EnderecoController@store")->name('endereco.store');
+Route::delete('/endereco/{id_endereco}/destroy', "EnderecoController@destroy")->name("endereco.destroy");
 
 // Rotas de autenticação
 Route::get('idioma/{idioma}', "IdiomaController@trocaIdioma")->name("idioma.trocaIdioma");

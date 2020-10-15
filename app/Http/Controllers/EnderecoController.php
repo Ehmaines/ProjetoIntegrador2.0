@@ -98,6 +98,11 @@ class EnderecoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $endereco = Endereco::find($id);
+        if(isset($endereco))
+        {
+            $endereco->delete();
+        }
+        return redirect()->route('endereco');
     }
 }
