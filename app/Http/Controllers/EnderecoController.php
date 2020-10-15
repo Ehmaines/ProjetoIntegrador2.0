@@ -75,7 +75,12 @@ class EnderecoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $enderecos = Endereco::find($id);
+        if(isset($enderecos))
+        {
+            return view('endereco.edit')->with('endereco', $enderecos);
+        }
+        return redirect()->route('endereco');
     }
 
     /**
