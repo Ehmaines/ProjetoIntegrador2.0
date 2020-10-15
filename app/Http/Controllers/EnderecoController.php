@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Produto;
+use App\TipoProduto;
+use BD;
 
 class EnderecoController extends Controller
 {
@@ -23,7 +26,7 @@ class EnderecoController extends Controller
      */
     public function create()
     {
-        //
+         
     }
 
     /**
@@ -34,7 +37,7 @@ class EnderecoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

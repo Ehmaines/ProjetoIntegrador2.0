@@ -42,7 +42,7 @@ class ProdutoController extends Controller
     public function create()
     {
         $tipoProdutos = TipoProduto::all();
-        return view('Produto.create')->with('tipoProdutos', $tipoProdutos);;
+        return view('Produto.create')->with('tipoProdutos', $tipoProdutos);
     }
 
     /**
