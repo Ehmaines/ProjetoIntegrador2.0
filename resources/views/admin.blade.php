@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Área do administrador</div>
+                    <div class="card-header">{{ __('admArea.areAdm') }}</div>
 
                     <div class="card-body text-center">
                         @if (session('status'))
@@ -13,10 +13,10 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <a href="{{route('welcome')}}" class="btn btn-primary">Voltar</a>    
-                        <a href="#" class="btn btn-primary">Manter Pedidos</a>
-                        <a href="{{route('produto.index')}}" class="btn btn-primary">Manter Produtos</a>
-                        <a href="{{route('tipoproduto.index')}}" class="btn btn-primary">Manter Tipo de Produtos</a>
+                        <a href="{{route('welcome')}}" class="btn btn-primary">{{ __('admArea.voltar') }}</a>    
+                        <a href="#" class="btn btn-primary">{{ __('admArea.manterPedido') }}</a>
+                        <a href="{{route('produto.index')}}" class="btn btn-primary">{{ __('admArea.manterProduto') }}</a>
+                        <a href="{{route('tipoproduto.index')}}" class="btn btn-primary">{{ __('admArea.manterTProduto') }}</a>
                     </div>
                 </div>
             </div>

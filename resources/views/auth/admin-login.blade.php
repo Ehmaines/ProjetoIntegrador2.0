@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header bg-primary text-light">Entrar como administrador</div>
+                    <div class="card-header bg-primary text-light">{{__('loginAsAdmin.logAdmin')}}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('admin.login.submit') }}">
@@ -13,7 +13,7 @@
 
                             <div class="form-group row">
                                 <label for="email"
-                                       class="col-md-4 col-form-label text-md-right">E-mail</label>
+                                       class="col-md-4 col-form-label text-md-right">{{ __('LoginAsAdmin.email') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -30,7 +30,7 @@
 
                             <div class="form-group row">
                                 <label for="password"
-                                       class="col-md-4 col-form-label text-md-right">Senha</label>
+                                       class="col-md-4 col-form-label text-md-right">{{ __('LoginAsAdmin.senha') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -52,7 +52,7 @@
                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
-                                            Lembrar-se de mim
+                                            {{ __('LoginAsAdmin.lebrarSeDeMim') }}
                                         </label>
                                     </div>
                                 </div>
@@ -60,15 +60,15 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <a href="{{route('welcome')}}" class="btn btn-primary">Voltar</a>  
+                                    <a href="{{route('welcome')}}" class="btn btn-primary">{{ __('LoginAsAdmin.voltar') }}</a>  
 
                                     <button type="submit" class="btn btn-primary">
-                                        Entrar
+                                        {{ __('LoginAsAdmin.entrar') }}
                                     </button>
 
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('admin.password.request') }}">
-                                            Esqueceu sua senha?
+                                            {{ __('LoginAsAdmin.esqueceuSenha') }}
                                         </a>
                                     @endif
                                 </div>
