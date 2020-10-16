@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'cadastro' => 'Registrar un nuevo producto',
+    'final' => 'Checkout',
+    'nome' => 'Nombre',
+    'tipo' => 'Tipo de producto',
+    'tip' => 'Tipo',
+    'acoes' => 'Aciones',
+    'cancel' => 'Cancelar el pedido',
+    'confirm' => 'Confimar pedido',
+    'adicionar' => 'Adicionar produtos',
+    'voltar' => 'Vuelve',
+    'novo' => 'Nueva Order',
+    'valor' => 'Precio Total',
+    'mostrar' => 'Mostrar',
+    'editar' => 'Editar',
+    'remover' => 'Eliminar',
+    'preco' => 'Precio',
+    'atualizacao' => 'Fecha de última actualización',
+    'create' => 'Fecha de creación',
+    'enviar' => 'Enviar',
+    'duvida' => '¿Realmente desea eliminar esta función?',
+    'remocao' => 'Eliminación de recursos',
+    'cancel1' => 'Cancelar',
+];

@@ -16,15 +16,15 @@
                 <input type="text" name="id" class="form-control" id="input-id" aria-describedby="idHelp" placeholder="id" disabled value={{$produto['id']}}>
             </div>
             <div class="form-group">
-                <label for="input-nome">Nome</label>
+                <label for="input-nome">{{__('produto.nome')}}</label>
                 <input type="text" name="nome" class="form-control" id="input-nome" placeholder="Digite o nome" value={{$produto['nome']}}>
             </div>
             <div class="form-group">
-                <label for="input-preco">Preço</label>
+                <label for="input-preco">{{__('produto.preco')}}</label>
                 <input type="text" name="preco" class="form-control" id="input-preco" placeholder="Digite o preço" value={{$produto['preco']}}>
             </div>
             <div class="form-group">
-                <label for="select-tipo">Tipo</label>
+                <label for="select-tipo">{{__('produto.tip')}}</label>
                 <select id="select-tipo" class="form-control" name="tipo">
                     @foreach ($tipoProdutos as $tipo)
                         @if ($produto['Tipo_Produtos_id'] == $tipo->id)
@@ -35,8 +35,8 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <a class="btn btn-primary" href="{{route('produto.index')}}">Voltar</a>
+            <button type="submit" class="btn btn-primary">{{__('produto.enviar')}}</button>
+            <a class="btn btn-primary" href="{{route('produto.index')}}">{{__('produto.voltar')}}</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

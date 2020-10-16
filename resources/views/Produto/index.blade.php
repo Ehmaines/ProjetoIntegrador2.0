@@ -8,16 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <a href="{{route('admin.dashboard')}}" class="btn btn-primary">Voltar</a> 
-        <a class="btn btn-primary" href="{{route('produto.create')}}">Cadastrar um novo produto</a>
+        <a href="{{route('admin.dashboard')}}" class="btn btn-primary">{{__('produto.voltar')}}</a> 
+        <a class="btn btn-primary" href="{{route('produto.create')}}">{{__('produto.cadastro')}}</a>
   
         <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Tipo de Produto</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">{{__('produto.nome')}}</th>
+                    <th scope="col">{{__('produto.tipo')}}</th>
+                    <th scope="col">{{__('produto.acoes')}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,9 +27,9 @@
                         <td>{{$produto['nome']}}</td>
                         <td>{{$produto['descricao']}}</td>
                         <td>
-                            <a class="btn btn-outline-primary" href="{{route('produto.show', $produto['id'])}}">Mostrar</a>
-                            <a class="btn btn-outline-secondary" href="{{route('produto.edit', $produto['id'])}}">Editar</a>
-                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="{{route('produto.destroy', $produto['id'])}}">Remover</a>
+                            <a class="btn btn-outline-primary" href="{{route('produto.show', $produto['id'])}}">{{__('produto.mostrar')}}</a>
+                            <a class="btn btn-outline-secondary" href="{{route('produto.edit', $produto['id'])}}">{{__('produto.editar')}}</a>
+                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="{{route('produto.destroy', $produto['id'])}}">{{__('produto.remover')}}</a>
                         </td>
                     </tr>
                 @endforeach
@@ -42,20 +42,20 @@
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Remoção de recurso</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{__('produto.remocao')}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body">
-                Deseja realmente remover esse recurso?
+                {{__('produto.duvida')}}
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('produto.cancel1')}}</button>
             <form id="id-form-delete" method="POST" action="">
                 @csrf
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-danger">Remover</button>
+                <button type="submit" class="btn btn-danger">{{__('produto.remover')}}</button>
             </form>
             </div>
         </div>

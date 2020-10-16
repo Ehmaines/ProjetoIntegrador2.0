@@ -44,20 +44,20 @@
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Remoção de recurso</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{__('produto.remocao')}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body">
-                Deseja realmente remover esse recurso?
+                {{__('produto.duvida')}}
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('produto.cancel1')}}</button>
             <form id="id-form-delete" method="POST" action="">
                 @csrf
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-danger">Remover</button>
+                <button type="submit" class="btn btn-danger">{{__('produto.remover')}}</button>
             </form>
             </div>
         </div>

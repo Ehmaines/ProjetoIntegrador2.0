@@ -14,15 +14,15 @@
             <input type="text" class="form-control" id="id-produto" value={{$produto->id}} disabled>
         </div>
         <div class="form-group">
-            <label for="id-nome">Nome</label>
+            <label for="id-nome">{{__('produto.nome')}}</label>
             <input type="text" class="form-control" id="id-nome" value={{$produto->nome}} disabled>
         </div>
         <div class="form-group">
-            <label for="id-preco">Preço</label>
+            <label for="id-preco">{{__('produto.preco')}}</label>
             <input type="text" class="form-control" id="id-preco" value={{$produto->preco}} disabled>
         </div>
         <div class="form-group">
-            <label for="id-tipoproduto">Tipo de Produto</label>
+            <label for="id-tipoproduto">{{__('produto.tipo')}}</label>
             <select id="id-tipoproduto" class="form-control" disabled>
                 @foreach ($tiposDeProduto as $tipoDeProduto)
                     @if ($tipoDeProduto->id == $produto->Tipo_Produtos_id)
@@ -34,14 +34,14 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="id-updated">Data de última atualização</label>
+            <label for="id-updated">{{__('produto.atualizacao')}}</label>
             <input type="text" class="form-control" id="id-updated" value={{$produto->updated_at}} disabled>
         </div>
         <div class="form-group">
-            <label for="id-created">Data de creiação</label>
+            <label for="id-created">{{__('produto.create')}}</label>
             <input type="text" class="form-control" id="id-created" value={{$produto->created_at}} disabled>
         </div>
-        <a class="btn btn-primary" href="{{route('produto.index')}}">Voltar</a>
+        <a class="btn btn-primary" href="{{route('produto.index')}}">{{__('produto.voltar')}}</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
