@@ -23,7 +23,7 @@
                             <a class="btn btn-primary font-weight-bold w-100" href="{{route('home')}}">{{__('pedido.voltar')}}</a>
                         </div>
                         <div class="col-8">
-                            <input type="submit" class="btn btn-info font-weight-bold w-100" value="{{__('pedido.voltar')}}">
+                            <input type="submit" class="btn btn-info font-weight-bold w-100" value="{{__('pedido.novo')}}">
                         </div>
                     </div>
                 </form>
