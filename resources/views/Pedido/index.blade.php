@@ -57,7 +57,19 @@
                 </select>
                 <form id="id-form-enviar-pedido" method="post" action="">
                     @csrf
-                    <input type="submit" id="id-botao-enviar-pedido" class="btn btn-info btn-block my-2 font-weight-bold" value="Enviar pedido">
+                    <input type="submit" id="id-botao-enviar-pedido" class="btn btn-info btn-block my-2 font-weight-bold" value="Imprimir pedido">
+                </form>
+                <form id="id-form-enviar-pedido" method="post" action="">
+                    @csrf
+                    <input type="submit" id="id-botao-enviar-pedido" class="btn btn-success btn-block my-2 font-weight-bold" value="Finalizar pedido">
+                </form>
+                <form id="id-form-enviar-pedido" method="post" action="">
+                    @csrf
+                    <input type="submit" id="id-botao-enviar-pedido" class="btn btn-danger btn-block my-2 font-weight-bold" value="Cancelar pedido">
+                </form>
+                <form id="id-form-enviar-pedido" method="post" action="">
+                    @csrf
+                    <input type="submit" id="id-botao-enviar-pedido" class="btn btn-warning btn-block my-2 font-weight-bold" value="Confirmar pedido">
                 </form>
             </div>
             <div class="col-lg-4">

@@ -153,4 +153,20 @@ class PedidoController extends Controller
         //echo json_encode($response);
         return response()->json( $response, 401 );
     }
+    public function finalizarPedido(Request $request, $pedido_id, $endereco_id)
+    {
+        $pedido = Pedido::find($pedido_id);
+        if($pedido->status == "I"){
+        $pedido->status = "F";
+        $pedido->update();
+        $response['success'] = true;
+        $response['return'] = $pedido;
+        $response['message'] = "Pedido Finalizado com sucesso";
+        return response()->json( $response, 201 );
+        }
+        $response['success'] = false;
+        $response['message'] = "O Status do Produto tem que ser (Impresso)";
+        return response()->json( $response, 401 );
+        
+    }
 }
