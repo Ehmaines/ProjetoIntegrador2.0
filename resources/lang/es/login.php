@@ -6,7 +6,7 @@ return [
     'senha' => 'Contraseña',
     'lebrarSeDeMim' => 'Recuérdame',
     'voltar' => 'Vuelve',
-    'entrar' => 'Log in',
+    'entrar' => 'Login',
     'esqueceuSenha' => '¿Olvidaste tu contraseña?'
 
     

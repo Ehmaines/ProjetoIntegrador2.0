@@ -8,17 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <a href="{{route('admin.dashboard')}}" class="btn btn-primary">Voltar</a> 
-        <a class="btn btn-primary" href="{{route('endereco.create')}}">Cadastrar um novo endereço</a>
+        <a href="{{route('home')}}" class="btn btn-primary">{{__('endereco.voltar')}}</a> 
+        <a class="btn btn-primary" href="{{route('endereco.create')}}">{{__('endereco.cadastro')}}</a>
   
         <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">bairro</th>
-                    <th scope="col">logradouro</th>
-                    <th scope="col">numero</th>
-                    <th scope="col">complemento</th>
+                    <th scope="col">{{__('endereco.bairro')}}</th>
+                    <th scope="col">{{__('endereco.logradouro')}}</th>
+                    <th scope="col">{{__('endereco.numero')}}</th>
+                    <th scope="col">{{__('endereco.complemento')}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,8 +30,8 @@
                         <td>{{$endereco['numero']}}</td>
                         <td>{{$endereco['complemento']}}</td>
                         <td>
-                            <a class="btn btn-outline-secondary" href="{{route('endereco.edit', $endereco['id'])}}">Editar</a>
-                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="{{route('endereco.destroy', $endereco['id'])}}">Remover</a>
+                            <a class="btn btn-outline-secondary" href="{{route('endereco.edit', $endereco['id'])}}">{{__('endereco.editar')}}</a>
+                            <a class="btn btn-outline-danger delButton" data-toggle="modal" data-target="#modalDelete" value="{{route('endereco.destroy', $endereco['id'])}}">{{__('endereco.remover')}}</a>
                         </td>
                     </tr>
                 @endforeach
