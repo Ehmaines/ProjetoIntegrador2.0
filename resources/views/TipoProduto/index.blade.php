@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Index de Tipo Produto</title>
+    <title>{{__('tipoProdutoIndex.indexTipoProduto')}}</title>
 </head>
 <body>
     <div class="container">
-        <a href="{{route('tipoproduto.create')}}">Cadastrar um novo tipo de produto</a>
-        <ul>
+        <a class="btn btn-primary ml-5 mt-3" href="{{route('tipoproduto.create')}}">{{__('tipoProdutoIndex.cadastrarNovoTipoProduto')}}</a>
+        <ul class=".list-group-flush">
             @foreach ($resources as $resource)
-                <li>
+                <li class="list-group-item col-4 mt-3 ">
                     {{$resource['id']}} - {{$resource['descricao']}}
-                    <a href="{{route('tipoproduto.edit', $resource['id'])}}">Editar</a>
-                    <a href="{{route('tipoproduto.destroy', $resource['id'])}}">Remover</a>
+                    <a href="{{route('tipoproduto.edit', $resource['id'])}}">{{__('tipoProdutoIndex.editar')}}</a>
+                    <a href="{{route('tipoproduto.destroy', $resource['id'])}}">{{__('tipoProdutoIndex.remover')}}</a>
                 </li>
             @endforeach
         </ul>

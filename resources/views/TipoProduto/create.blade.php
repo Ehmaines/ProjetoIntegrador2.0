@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Create de Tipo Produto</title>
+    <title>{{__('tipoProdutoCreate.create')}}</title>
 </head>
 <body>
     <div class="container">
@@ -13,13 +13,13 @@
             <div class="form-group">
                 <label for="input-id">ID</label>
                 <input type="text" class="form-control" id="input-id" aria-describedby="idHelp" placeholder="#" disabled>
-                <small id="idHelp" class="form-text text-muted">Não é necessário informar o ID para cadastrar um novo dado.</small>
+                <small id="idHelp" class="form-text text-muted">{{__('tipoProdutoCreate.idNaoNecessario')}}</small>
             </div>
             <div class="form-group">
-                <label for="input-desc">Descrição</label>
+                <label for="input-desc">{{__('tipoProdutoCreate.descricao')}}</label>
                 <input type="text" name="descricao" class="form-control" id="input-desc" placeholder="Digite a descrição">
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">{{__('tipoProdutoCreate.enviar')}}</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
