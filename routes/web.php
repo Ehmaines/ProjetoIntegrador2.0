@@ -39,7 +39,7 @@ Route::get('/endereco/create', "EnderecoController@create")->name('endereco.crea
 Route::post('/endereco/store', "EnderecoController@store")->name('endereco.store');
 Route::delete('/endereco/{id_endereco}/destroy', "EnderecoController@destroy")->name("endereco.destroy");
 Route::get('/endereco/{id_endereco}/edit', "EnderecoController@edit")->name("endereco.edit");
-Route::patch('/endereco/{id_endereco}/update', "EnderecoController@update")->name("endereco.update");
+Route::put('/endereco/{id_endereco}/update', "EnderecoController@update")->name("endereco.update");
 
 // Rotas de autenticação
 Route::get('idioma/{idioma}', "IdiomaController@trocaIdioma")->name("idioma.trocaIdioma");

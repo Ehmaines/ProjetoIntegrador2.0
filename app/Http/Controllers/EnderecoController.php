@@ -75,10 +75,11 @@ class EnderecoController extends Controller
      */
     public function edit($id)
     {
-        $enderecos = Endereco::find($id);
-        if(isset($enderecos))
+        $resEndereco = json_decode(json_encode(DB::select("select * from enderecos where Enderecos.id = :id_endereco", ['id_endereco' => $id])), true);
+        if(isset($resEndereco))
         {
-            return view('endereco.edit')->with('endereco', $enderecos);
+            return view('endereco.edit')->with('resEndereco', $resEndereco[0]);
+            //print_r();
         }
         return redirect()->route('endereco');
     }
@@ -92,7 +93,16 @@ class EnderecoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $endereco = Endereco::find($id);
+        if(isset($endereco)){
+            $endereco->bairro = $request->bairro;
+            $endereco->logradouro = $request->logradouro;
+            $endereco->numero = $request->numero;
+            $endereco->complemento = $request->complemento;
+            $endereco->update();
+        }
+    return redirect()->route('endereco');
+
     }
 
     /**

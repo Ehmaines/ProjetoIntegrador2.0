@@ -35,7 +35,6 @@
                         </td>
                     </tr>
                 @endforeach
-                <?php print_r($enderecos); ?>
             </tbody>
         </table>
     </div>

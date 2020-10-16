@@ -8,35 +8,31 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" action="{{route('endereco.update', $endereco['id'])}}">
+        <form method="POST" action="{{route('endereco.update', $resEndereco['id'])}}">
             @csrf
             <input type="hidden" name="_method" value="PUT">
             <div class="form-group">
                 <label for="input-id">ID</label>
-                <input type="text" name="id" class="form-control" id="input-id" aria-describedby="idHelp" placeholder="id" disabled value={{$endereco[0]['id']}}>
+                <input type="text" name="id" class="form-control" id="input-id" aria-describedby="idHelp" placeholder="id" disabled value={{$resEndereco['id']}}>
             </div>
             <div class="form-group">
                 <label for="input-nome">bairro</label>
-                <input type="text" name="nome" class="form-control" id="input-nome" placeholder="Digite o nome" value={{$endereco['bairro']}}>
+                <input type="text" name="bairro" class="form-control" id="input-nome" placeholder="Digite o nome" value={{$resEndereco['bairro']}}>
             </div>
             <div class="form-group">
                 <label for="input-preco">logradouro</label>
-                <input type="text" name="preco" class="form-control" id="input-preco" placeholder="Digite o preço" value={{$endereco['logradouro']}}>
+                <input type="text" name="logradouro" class="form-control" id="input-preco" placeholder="Digite o preço" value={{$resEndereco['logradouro']}}>
             </div>
             <div class="form-group">
-                <label for="select-tipo">Tipo</label>
-                <select id="select-tipo" class="form-control" name="tipo">
-                    @foreach ($enderecos as $endereco)
-                        @if ($endereco['id'] == $enderecos->id)
-                            <option value="{{$endereco->id}}" selected>{{$endereco->bairro}}</option>
-                        @else
-                            <option value="{{$endereco->id}}">{{$endereco->logradouro}}</option>
-                        @endif
-                    @endforeach
-                </select>
+                <label for="input-preco">Número</label>
+                <input type="text" name="numero" class="form-control" id="input-preco" placeholder="Digite o preço" value={{$resEndereco['numero']}}>
+            </div>
+            <div class="form-group">
+                <label for="input-preco">Complemento</label>
+                <input type="text" name="complemento" class="form-control" id="input-preco" placeholder="Digite o preço" value={{$resEndereco['complemento']}}>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
-            <a class="btn btn-primary" href="{{route('endereco.index')}}">Voltar</a>
+            <a class="btn btn-primary" href="{{route('endereco')}}">Voltar</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
